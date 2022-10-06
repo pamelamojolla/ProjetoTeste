@@ -1,0 +1,36 @@
+<body class="bg-light">
+
+  <div *ngIf="alerterror" class="alert alert-danger" role="alert">
+    {{alerterror}}
+  </div>
+
+  <div class="d-flex flex-column ">
+    <form class="form-floating d-flex flex-column  justify-content-center align-items-center " (ngSubmit)="onSubmit()">
+
+      <!-- imagem Leão -->
+      <img [src]="leao" width="350" height="350">
+      <h1 class="mb-4">Digite seu usuário e senha.</h1>
+
+      <!-- Email input -->
+      <div class="form-floating mb-4 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-4">
+        <input type="email" id="email" name="email" class="form-control" placeholder="Usuário"
+          [(ngModel)]="login.email" />
+        <label class="form-label" for="email">Usuário</label>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-floating mb-4 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-4">
+        <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha"
+          [(ngModel)]="login.senha" />
+        <label class="form-label" for="senha">Senha</label>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit"
+        class="btn btn-primary btn-block mb-4 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-4">Entrar</button>
+
+    </form>
+     
+  </div>
+
+</body>
